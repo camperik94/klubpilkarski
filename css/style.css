@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 320px) {
+    body {
+        /* background-color: red; */
+    }
+
+    nav {
+        display: flex;
+        height: 15vh;
+        background-color: rgba(69, 155, 12, 0.7);
+        justify-content: space-between;
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        flex-basis: 20%;
+    }
+
+    .logo i {
+        font-size: 50px;
+        color: rgb(77, 70, 70);
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-basis: 20%;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #landing {
+        height: 85vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .black {
+        position: absolute;
+        height: 90vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    #landing img {
+        position: absolute;
+        background-size: cover;
+        min-height: 100vh;
+        animation: slider 15s infinite linear;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    #landing img:nth-child(2) {
+        animation-delay: 5s;
+    }
+
+    #landing img:nth-child(3) {
+        animation-delay: 10s;
+    }
+
+    /* #landing h1 {
+        position: absolute;
+        text-align: center;
+        top: 100px;
+    }
+
+    #landing h2 {
+        position: absolute;
+        text-align: center;
+        top: 150px;
+    } */
+
+    #landing button {
+        font-family: "Saira", sans-serif;
+        position: absolute;
+        text-align: center;
+        top: 380px;
+        left: 50%;
+        transform: translate(-50%);
+        height: 80px;
+        width: 270px;
+        border-style: none;
+        background-color: transparent;
+        color: wheat;
+        border: 0;
+        text-decoration: none;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    #landing button a {
+        text-decoration: none;
+        color: wheat;
+    }
+
+    .bg {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        transform: translate(0, -50%);
+        z-index: 3;
+        /* background-color: rgba(0, 0, 0, 0.6); */
+    }
+
+    .bg h1 {
+        color: white;
+        text-align: center;
+        font-family: "Merriweather", serif;
+    }
+
+    #offer {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    #offer h1 {
+        text-align: center;
+        font-family: "Merriweather", serif;
+    }
+
+    .images h2 {
+        text-align: center;
+        padding-top: 20px;
+        font-family: "Merriweather", serif;
+    }
+
+    .images img {
+        width: 100%;
+        border: #000 solid;
+        margin-top: 20px;
+    }
+
+    #about {
+        width: 100%;
+        margin: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #about h1 {
+        text-align: center;
+        font-family: "Merriweather", serif;
+    }
+
+    #contact h1 {
+        text-align: center;
+        font-family: "Merriweather", serif;
+
+        padding-bottom: 20px;
+    }
+
+    .contact-form {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        margin-right: 4%;
+    }
+
+    .input-fields,
+    .msg {
+        width: 48%;
+    }
+
+    .input-fields .input,
+    .msg textarea {
+        margin: 10px 0;
+        background: transparent;
+        border: 0px;
+        border-bottom: 2px solid #c5ecfd;
+        padding: 10px;
+        color: #c5ecfd;
+        width: 100%;
+    }
+
+    .msg textarea {
+        height: 212px;
+    }
+
+    .btn {
+        background: #39b7dd;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 375px) {
+        .bg h1 {
+            padding: 20px;
+        }
+
+        .menu-icon {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about p {
+            font-size: 18px;
+        }
+
+        #landing button {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 410px) {
+        .menu-icon {}
+
+        #landing button {
+            top: 500px;
+            font-size: 20px;
+        }
+
+        #about p {
+            font-size: 20px;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .menu-icon i {
+            font-size: 48px;
+        }
+
+
+
+        #landing .bg h1 {
+            font-size: 40px;
+        }
+
+        #offer h1 {
+            font-size: 40px;
+        }
+
+        #about h1 {
+            font-size: 40px;
+        }
+
+        #about p {
+            padding: 40px;
+            font-size: 30px;
+        }
+
+        #contact h1 {
+            font-size: 40px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #landing button {
+            top: 700px;
+            width: 70%;
+            height: 10vh;
+            font-size: 30px;
+        }
+
+        .input-fields input {
+            font-size: 30px;
+        }
+
+        .msg textarea {
+            font-size: 30px;
+        }
+
+        .msg .btn {
+            font-size: 30px;
+        }
+
+        #offer h1 {
+            font-size: 50px;
+        }
+
+        .images h2 {
+            font-size: 35px;
+        }
+
+        #about h1 {
+            font-size: 50px;
+        }
+
+        #contact h1 {
+            font-size: 50px;
+        }
+
+    }
+
+    @media (min-width: 1366px) {
+        .menu-icon i {
+            display: none;
+        }
+
+        aside {
+            display: none;
+        }
+
+        nav {
+            height: 10vh;
+        }
+
+        #landing {
+            height: 90vh;
+        }
+
+        .menu {
+            display: flex;
+            flex-basis: 80%;
+        }
+
+        .menu ul {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            list-style-type: none;
+            justify-content: center;
+
+        }
+
+        .menu ul li {
+            padding-left: 50px;
+            color: white;
+            font-family: serif;
+            font-size: 18px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        #landing button {
+            top: 500px;
+        }
+
+        #offer {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #offer h1 {
+            flex-basis: 100%;
+            flex-shrink: 0;
+            padding-top: 30px;
+        }
+
+        #offer .images {
+            flex-basis: 40%;
+            padding-left: 10px;
+
+        }
+
+
+
+        #about p {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .contact-form {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+
+        }
+
+        #contact h1 {
+            padding-top: 30px;
+        }
+
+        .msg textarea {
+            height: 170px;
+        }
+
+        .input-fields,
+        .msg {
+            padding-top: 30px;
+            width: 50%;
+            margin-right: 0;
+        }
+
+        #contact .msg .btn {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        #landing button {
+            top: 700px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .contact-form {
+            flex-direction: column;
+        }
+
+        .msg textarea {
+            height: 80px;
+        }
+
+        .input-fields,
+        .msg {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    aside {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: .3s linear;
+        z-index: 4;
+    }
+
+    .show ul {
+        width: 100%;
+
+    }
+
+    .show ul li {
+        height: 10vh;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .show ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+
+    i.show {
+        display: block;
+    }
+
+    aside.show {
+        left: 0;
+    }
+}
+
+@keyframes slider {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    33.33% {
+        opacity: 1;
+    }
+
+    38.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

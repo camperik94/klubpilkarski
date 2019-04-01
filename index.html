@@ -6,10 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Klub piłkarski</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
 
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#landing">Strona główna</a></li>
+                    <li><a href="#offer">Oferta</a></li>
+                    <li><a href="#about">O nas</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <i class="fas fa-futbol"></i>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <div id="landing">
+        <img src="img/boi1.jpeg" alt="">
+        <img src="img/boisko.jpeg" alt="">
+        <img src="img/boi2.jpeg" alt="">
+        <div class="bg">
+            <h1>Witamy w szkole piłkarskiej "Piłkarzyki"</h1>
+        </div>
+        <aside>
+            <ul>
+                <li><a href="#landing">Strona główna</a></li>
+                <li><a href="#offer">Oferta</a></li>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </aside>
+        <button><a href="#offer">Zobacz więcej</a></button>
+        <div class="black"></div>
+    </div>
+
+
+    </div>
+    <div id="offer">
+        <h1>Oferta:</h1>
+        <div class="images">
+            <h2>Dzieci</h2>
+            <img src="img/dzieci6.jpeg" alt="">
+        </div>
+        <div class="images">
+            <h2>Młodzież</h2>
+            <img src="img/mlodziez13.jpeg" alt="">
+        </div>
+        <div class="images">
+            <h2>Dorośli</h2>
+            <img src="img/mlodziez12.jpeg" alt="">
+        </div>
+        <div class="images">
+            <h2>Kobiety</h2>
+            <img src="img/footballgirls.jpeg" alt="">
+        </div>
+    </div>
+    <div id="about">
+        <h1>O nas</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, officia. Doloribus at quaerat ipsam nam
+            distinctio consequatur optio quisquam reprehenderit, temporibus facere, beatae rerum nisi iusto rem commodi
+            amet a. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam natus corporis maxime. Nisi
+            mollitia nemo ut eaque consequuntur recusandae soluta iste minus iusto, dolores suscipit consequatur
+            repellendus accusamus quibusdam culpa. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+            aliquid minima voluptatem, dolorem quos, sapiente, odio nobis facilis porro unde ad quam sit suscipit alias?
+            Non provident consequuntur vitae temporibus!</p>
+    </div>
+    <div id="contact">
+        <h1>Kontakt:</h1>
+        <div class="contact-form">
+            <div class="input-fields">
+                <input type="text" class="input" placeholder="Imię">
+                <input type="email" class="input" placeholder="Email">
+                <input type="text" class="input" placeholder="Telefon">
+                <input type="text" class="input" placeholder="Temat">
+            </div>
+            <div class="msg">
+                <textarea placeholder="Wiadomość"></textarea>
+                <div class="btn">Wyślij</div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            ScrollReveal().reveal('.images img, p', {
+                interval: 300
+            });
+            $(".menu-icon").on("click", function () {
+                $("i", this).toggleClass("fa fa-bars fa-2x fas fa-times");
+                $("aside").toggleClass("show");
+            })
+            $(document).ready(function () {
+                $('a[href^="#"]').click(function () {
+                    var hash = $(this).attr('href');
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1500);
+                    return false;
+                });
+            });
+        </script>
 </body>
 
 </html>
